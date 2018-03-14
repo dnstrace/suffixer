@@ -1,0 +1,8 @@
+# ignore dependencies
+deps/**
+
+# ignore data
+public_suffix_list.dat
+
+# ignore config
+config.php
