@@ -1,9 +1,10 @@
 # suffixer
-The suffix-fixer for dnstrace tools that require a specific performance profile.
+
+The suffix-fixer for dnstrace tools that require a specific performance profile and update frequency. Oh, and because we love statistics ❤️
 
 ### Notes
 
-The format for the files output, as well as statistics and a fresh copy of the output (daily, 1:50am EST) is provided at [dnstrace/public-suffix-data](https://github.com/dnstrace/public-suffix-data). You should probably go there unless you have a specific reason to be here. Seriously. Domain data is very slow to propagate, even the Public Suffix List maintainers recommend weekly updates instead of daily.
+The format for the files output, as well as statistics and a fresh copy of the output (daily, 1:50am EST) is provided at [dnstrace/public-suffix-data](https://github.com/dnstrace/public-suffix-data). You should probably go there unless you have a specific reason to be here. Seriously. Domain data is very slow to propagate, even the Public Suffix List maintainers recommend weekly updates instead of daily. 
 
 ...you're sure you want to run this on your own? Alright - just for you:
 
