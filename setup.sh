@@ -1,4 +1,5 @@
 #!/bin/bash
+mkdir data
 mkdir deps
 cd deps
 curl -sS https://getcomposer.org/installer | php

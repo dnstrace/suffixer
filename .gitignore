@@ -2,7 +2,7 @@
 deps/**
 
 # ignore data
-public_suffix_list.dat
+data/**
 
-# ignore config
-config.php
+# ignore git_it
+git_it.sh
