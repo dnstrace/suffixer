@@ -4,5 +4,5 @@ deps/**
 # ignore data
 data/**
 
-# ignore git_it
-git_it.sh
+# ignore git_it (tweedge's tool)
+git_it.php
