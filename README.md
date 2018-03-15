@@ -1,6 +1,8 @@
 # suffixer
 
-The suffix-fixer for dnstrace tools that require a specific performance profile and update frequency. Oh, and because we love statistics ❤️
+The suffix-fixer for dnstrace tools that require a specific performance profile and update frequency.
+
+Oh, and because we love statistics ❤️
 
 ### Notes
 
