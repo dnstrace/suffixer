@@ -132,7 +132,7 @@ foreach($ICANNex as $SFXex) {
 		$SFXm[$i - 1] = $SFXex[$i];
 	}
 	
-	$ICANNTLDs[$SFXex[0]] = $SFXm;
+	$ICANNTLDs[$SFXex[0]][] = $SFXm;
 }
 
 foreach($Privateex as $SFXex) {
