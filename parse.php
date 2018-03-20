@@ -128,8 +128,9 @@ foreach($ICANNex as $SFXex) {
 	}
 	
 	$SFXm = [];
+	$SFXm[0] = count($SFXex);
 	for($i = 1; $i < count($SFXex); $i++) {
-		$SFXm[$i - 1] = $SFXex[$i];
+		$SFXm[$i] = $SFXex[$i];
 	}
 	
 	$ICANNTLDs[$SFXex[0]][] = $SFXm;
@@ -141,8 +142,9 @@ foreach($Privateex as $SFXex) {
 	}
 	
 	$SFXm = [];
+	$SFXm[0] = count($SFXex);
 	for($i = 1; $i < count($SFXex); $i++) {
-		$SFXm[$i - 1] = $SFXex[$i];
+		$SFXm[$i] = $SFXex[$i];
 	}
 	
 	$PrivateTLDs[$SFXex[0]][] = $SFXm;
