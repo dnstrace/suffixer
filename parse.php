@@ -123,31 +123,49 @@ $ICANNTLDs = [];
 $PrivateTLDs = [];
 
 foreach($ICANNex as $SFXex) {
-	if(!array_key_exists($SFXex[0], $ICANNTLDs)) {
-		$ICANNTLDs[$SFXex[0]] = [];
+	$walk = [];
+	$recon = [];
+	$pos = $ICANNTLDs;
+	
+	for($idx = 0; $idx < count($SFXex); $idx++) {
+		if(!array_key_exists($SFXex[$idx], $pos)) {
+			$pos[$SFXex[$idx]] = [];
+		}
+		$walk[$idx] = $pos;
+		$recon[$idx] = $SFXex[$idx];
+		$pos = $pos[$SFXex[$idx]];
 	}
 	
-	$SFXm = [];
-	$SFXm[0] = count($SFXex);
-	for($i = 1; $i < count($SFXex); $i++) {
-		$SFXm[$i] = $SFXex[$i];
+	for($idx = count($walk) - 1; $idx > 0; $idx--) {
+		$addTo = $walk[$idx - 1];
+		$addTo[$recon[$idx - 1]] = $walk[$idx];
+		$walk[$idx - 1] = $addTo;
 	}
 	
-	$ICANNTLDs[$SFXex[0]][] = $SFXm;
+	$ICANNTLDs = $walk[0];
 }
 
 foreach($Privateex as $SFXex) {
-	if(!array_key_exists($SFXex[0], $PrivateTLDs)) {
-		$PrivateTLDs[$SFXex[0]] = [];
+	$walk = [];
+	$recon = [];
+	$pos = $PrivateTLDs;
+	
+	for($idx = 0; $idx < count($SFXex); $idx++) {
+		if(!array_key_exists($SFXex[$idx], $pos)) {
+			$pos[$SFXex[$idx]] = [];
+		}
+		$walk[$idx] = $pos;
+		$recon[$idx] = $SFXex[$idx];
+		$pos = $pos[$SFXex[$idx]];
 	}
 	
-	$SFXm = [];
-	$SFXm[0] = count($SFXex);
-	for($i = 1; $i < count($SFXex); $i++) {
-		$SFXm[$i] = $SFXex[$i];
+	for($idx = count($walk) - 1; $idx > 0; $idx--) {
+		$addTo = $walk[$idx - 1];
+		$addTo[$recon[$idx - 1]] = $walk[$idx];
+		$walk[$idx - 1] = $addTo;
 	}
 	
-	$PrivateTLDs[$SFXex[0]][] = $SFXm;
+	$PrivateTLDs = $walk[0];
 }
 
 // debug
