@@ -71,9 +71,9 @@ $recountICANN = count($ICANN);
 $Private = array_unique($Private);
 $recountPrivate = count($Private);
 
-echo "ICANN suffixes found: " . $countICANN . "   Private suffixes found: " . $countPrivate . PHP_EOL . PHP_EOL;
-echo "Unique ICANN suffixes: " . $recountICANN . "   Unique Private suffixes: " . $recountPrivate . PHP_EOL . PHP_EOL;
-echo "Discrepancy: " . (($countICANN + $countPrivate) - ($recountICANN + $recountPrivate)) . PHP_EOL . PHP_EOL;
+echo "ICANN suffixes found: " . $countICANN . ", unique: " . $recountICANN . PHP_EOL;
+echo "Private suffixes found: " . $countPrivate . ", unique: " . $recountPrivate . PHP_EOL;
+echo "Discrepancy: " . (($countICANN + $countPrivate) - ($recountICANN + $recountPrivate)) . PHP_EOL;
 echo "Obvious punycode errors: " . $parseErrors . PHP_EOL . PHP_EOL;
 
 // splitting
@@ -116,7 +116,8 @@ foreach($Private as $SFX) {
 // var_dump($ICANNex);
 // var_dump($Privateex);
 
-echo "Max ICANN suffix depth: " . $lvlMaxICANN . "   Max Private suffix depth: " . $lvlMaxPrivate . PHP_EOL . PHP_EOL;
+echo "Max ICANN suffix depth: " . $lvlMaxICANN . PHP_EOL;
+echo "Max Private suffix depth: " . $lvlMaxPrivate . PHP_EOL . PHP_EOL;
 
 // consolidation
 $ICANNTLDs = [];
@@ -172,7 +173,8 @@ foreach($Privateex as $SFXex) {
 // var_dump($ICANNTLDs);
 // var_dump($PrivateTLDs);
 
-echo "ICANN TLDs: " . count($ICANNTLDs) . "   Private TLDs: " . count($PrivateTLDs) . PHP_EOL . PHP_EOL;
+echo "ICANN TLDs: " . count($ICANNTLDs) . PHP_EOL;
+echo "Private TLDs: " . count($PrivateTLDs) . PHP_EOL;
 
 // encode
 $ICANNJSON = json_encode($ICANNTLDs);
