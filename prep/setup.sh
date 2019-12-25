@@ -1,6 +1,6 @@
 #!/bin/bash
-mkdir data
-mkdir deps
-cd deps
+mkdir ../data
+mkdir ../deps
+cd ../deps
 curl -sS https://getcomposer.org/installer | php
 php composer.phar require true/punycode:~2.0

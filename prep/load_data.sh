@@ -1,4 +1,3 @@
 #!/bin/bash
-cd data
-rm public_suffix_list.dat
+cd ../data
 wget https://publicsuffix.org/list/public_suffix_list.dat

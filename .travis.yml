@@ -15,7 +15,8 @@ notifications:
     on_success: never
 
 script: 
-  - cd ${TRAVIS_BUILD_DIR}
+  - cd ${TRAVIS_BUILD_DIR}/prep
   - bash setup.sh
   - bash load_data.sh
+  - cd ${TRAVIS_BUILD_DIR}
   - php parse.php
