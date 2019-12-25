@@ -20,3 +20,4 @@ script:
   - bash load_data.sh
   - cd ${TRAVIS_BUILD_DIR}
   - php parse.php
+  - bash compare.sh
