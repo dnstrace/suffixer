@@ -1,5 +1,8 @@
 # ignore dependencies
 deps/**
 
-# ignore data
-data/**
+# ignore working data
+running/**
+
+# ignore PSD
+psd/**

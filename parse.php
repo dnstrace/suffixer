@@ -6,7 +6,7 @@ use TrueBV\Punycode;
 $puny = new Punycode();
 
 // acquire data
-$PSL = fopen("data/public_suffix_list.dat", "r");
+$PSL = fopen("running/public_suffix_list.dat", "r");
 
 // punycoding and rule trimming
 $endICANN = false;
@@ -181,5 +181,5 @@ $ICANNJSON = json_encode($ICANNTLDs);
 $PrivateJSON = json_encode($PrivateTLDs);
 
 // write
-file_put_contents("data/icann.json", $ICANNJSON);
-file_put_contents("data/private.json", $PrivateJSON);
+file_put_contents("running/icann.json", $ICANNJSON);
+file_put_contents("running/private.json", $PrivateJSON);

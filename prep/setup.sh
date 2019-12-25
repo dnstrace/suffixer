@@ -1,5 +1,5 @@
 #!/bin/bash
-mkdir ../data
+mkdir ../running
 mkdir ../deps
 cd ../deps
 curl -sS https://getcomposer.org/installer | php
