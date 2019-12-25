@@ -5,10 +5,10 @@ files=( "icann.json" "private.json" )
 
 for file in "${files[@]}"
 do
-  if cmp -s "running/$file" "psd/$file"; then
+  if cmp running/$file psd/$file; then
     echo "$file differs, the psd needs to be updated"
     cp -fv running/* psd/
-    echo "local psd directory has been cleaned & can be used to push changes"
+    echo "local psd directory can be used to push changes"
     exit 1
   else
     echo "$file is the same in both places"

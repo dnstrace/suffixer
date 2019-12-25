@@ -19,5 +19,5 @@ script:
   - bash setup.sh
   - bash load_data.sh
   - cd ${TRAVIS_BUILD_DIR}
-  - php parse.php
-  - bash compare.sh
+  - php parse-new-psl.php
+  - bash compare-and-update.sh
