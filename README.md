@@ -1,23 +1,12 @@
 # suffixer
 
-The suffix-fixer for dnstrace tools that require a specific performance profile and update frequency.
+The suffix-fixer for tools that require a specific performance profile (fast!) and update frequency (often!).
 
-Oh, and because we love statistics ❤️
+The format for the files output, as well as statistics and a reasonably fresh copy of the output is provided at [mns-llc/public-suffix-data](https://github.com/mns-llc/public-suffix-data). You should probably go there. There's nothing for you here. :music:
 
-### Notes
-
-The format for the files output, as well as statistics and a fresh copy of the output (daily, 1:50am EST) is provided at [dnstrace/public-suffix-data](https://github.com/dnstrace/public-suffix-data). You should probably go there unless you have a specific reason to be here. Seriously. Domain data is very slow to propagate, even the Public Suffix List maintainers recommend weekly updates instead of daily. 
-
-...you're sure you want to run this on your own? Alright - just for you:
-
-### Quick Start
-
-```
-bash setup.sh
-bash load_data.sh
-php parse.php
-```
-
-After running once, setup.sh does not need to be run again. Please note that load_data.sh fetches a fresh copy of the Public Suffix List, so per the request of the PSL maintainers (Mozilla, very nice people) please do not run load_data.sh more than once per day.
-
-Go ham with parse.php though, no harm in running that whenever you like. Data is saved to suffixer/data under icann.json and private.json. Not detailed enough for you? Questions about domain stuff? Contact the [maintainer](https://github.com/tweedge).
+A build is run nightly in Travis to:
+* Ensure the [publicsuffix/list](https://github.com/publicsuffix/list) repo has the same data as the currently published PSL
+* Ensure no ICANN-recognized TLDs are missing from the PSL
+* Parse the current PSL using recent PHP7
+* Test a few example domain lookups
+* Ensure that [mns-llc/public-suffix-data](https://github.com/mns-llc/public-suffix-data) is up to date
