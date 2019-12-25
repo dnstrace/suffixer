@@ -1,6 +1,6 @@
 # suffixer
 
-The suffix-fixer for tools that require a specific performance profile (fast!) and update frequency (often!).
+The suffix-fixer for tools that require a specific performance profile (fast!) and update frequency (often!). This also does a few health checks for PSL maintainers, because why not.
 
 The format for the files output, as well as statistics and a reasonably fresh copy of the output is provided at [mns-llc/public-suffix-data](https://github.com/mns-llc/public-suffix-data). You should probably go there. There's nothing for you here. :music:
 
